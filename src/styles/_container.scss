@@ -1,0 +1,14 @@
+.container {
+  position: relative;
+  margin: 0 30px;
+
+  max-width: 1170px;
+
+  @include on-tablet {
+    margin: 0 34px;
+  }
+
+  @include on-desktop {
+    margin: 0 auto;
+  }
+}

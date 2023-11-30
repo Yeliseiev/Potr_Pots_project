@@ -1,0 +1,129 @@
+.buy-now {
+  @include on-desktop {
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include on-tablet {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    @include on-desktop {
+      flex-direction: column;
+      gap: 60px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include on-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include on-desktop {
+      flex-flow: row wrap;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    margin-bottom: 5px;
+
+    @extend %text32;
+
+    color: $c-gray1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -14px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+
+      height: 7px;
+      width: 7px;
+
+      background-color: $c-gray2;
+    }
+
+    @include on-tablet {
+      font-size: 36px;
+    }
+  }
+
+  &__text {
+    @extend %text16;
+
+    color: #828282;
+  }
+
+  &__button {
+    margin-bottom: 40px;
+
+    @include on-desktop {
+      margin-bottom: 70px;
+    }
+
+    &-1 {
+      @include on-tablet {
+        display: none;
+      }
+    }
+
+    &-2 {
+      display: none;
+
+      @include on-tablet {
+        display: block;
+      }
+    }
+  }
+
+  &__discount {
+    margin-bottom: 10px;
+
+    @extend %h2;
+
+    color: $c-red;
+
+    @include on-tablet {
+      font-size: 24px;
+    }
+
+    @include on-desktop {
+      font-size: 36px;
+      margin-left: 100px;
+    }
+  }
+
+  &__announcement {
+    @extend %h3;
+
+    color: $c-turquoise;
+
+    @include on-tablet {
+      font-size: 18px;
+      width: 240px;
+    }
+
+    @include on-desktop {
+      width: fit-content;
+      margin-left: 100px;
+
+      font-size: 24px;
+    }
+  }
+}

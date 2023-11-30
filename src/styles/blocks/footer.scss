@@ -1,0 +1,71 @@
+.footer {
+  padding-bottom: 30px;
+
+  @include on-tablet {
+    padding-bottom: 115px;
+  }
+
+  @include on-desktop {
+    padding-bottom: 64px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include on-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__address {
+    display: none;
+
+    @include on-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 170px;
+    }
+  }
+
+  &__link {
+    @extend %text16;
+
+    text-decoration: underline;
+    text-decoration-color: transparent;
+
+    @include hover (text-decoration-color, #000);
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+
+    @include on-tablet {
+      text-align: start;
+    }
+
+    &-title {
+      display: none;
+
+      @extend %h3;
+
+      text-decoration: underline;
+      text-decoration-color: transparent;
+
+      @include hover (text-decoration-color, #000);
+
+      @include on-tablet {
+        display: block;
+      }
+    }
+
+    &-text {
+      @extend %text16;
+    }
+  }
+}
