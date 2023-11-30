@@ -1,4 +1,4 @@
-# Base layout template with Gulp, SCSS and Stylelint
+# Potr Pots landing page
 1. Create a repo using this template
 
     - [DEMO LINK](https://Yeliseiev.github.io/Potr_Pots_project/)
